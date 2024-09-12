@@ -1,0 +1,13 @@
+Url Shortner
+
+design a url shortner service that takes in a valid url and returns a shortened Url,
+redirecting the user to previously provided url
+
+also keeps track of number of clicks/visits on ther url
+
+routes:
+post api/url - generate a new short url and returns the shortened url 
+
+get api/url/:shortId  - redirects to Original url
+
+get api/url/analytics/:shortId - returns no. of clicks for provided shortId
