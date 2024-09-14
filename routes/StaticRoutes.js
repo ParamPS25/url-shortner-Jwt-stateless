@@ -13,7 +13,6 @@ router.get('/',async(req,res)=>{
     // so initially on first visit it will not have req.user property => will redirect to login.ejs
     if(!req.user) return res.redirect("/login");                 // req.user added property to req object by authMiddleware // after loggedin it will have req.user property
     const userUrls = await Url.find({createdBy:req.user._id});
-    console.log(userUrls);
     const showUser = req.user.email
     return res.render("home.ejs",{
             urls:userUrls,

@@ -2,9 +2,12 @@
   "name": "10_project_url_shortner",
   "version": "1.0.0",
   "main": "index.js",
+  "engines":{
+    "node":"18.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "param",
   "license": "ISC",

@@ -117,7 +117,7 @@
     <!-- EJS (Embedded JavaScript), locals is an object that contains local variables passed to the template. The id property within locals would be a specific variable that you are passing to the template -->
     <% if (locals.id) { %>
         <p class="generated-url">Url Generated :<a
-                href="http://localhost:8080/api/url/<%= id %>">http://localhost:8080/api/url/<%= id %></a>
+                href="/api/url/<%= id %>">/api/url/<%= id %></a> <!--http://localhost:8080/api/url/-->
         </p>
         <% } %>
 
@@ -130,7 +130,7 @@
                     <button type="submit">Generate</button>
                 </form>
 
-                <div class="home-link"><a href="http://localhost:8080/">home</a></div>
+                <div class="home-link"><a href="/">home</a></div>
             </div>
 
             <% if (locals.urls) { %>
@@ -147,7 +147,7 @@
                                 <td>
                                     <%= index+1 %>
                                 </td>
-                                <td><a href="http://localhost:8080/api/url/<%= url.shortId %>">
+                                <td><a href="/api/url/<%= url.shortId %>">
                                         <%= url.shortId %>
                                     </a></td>
                                 <td>
